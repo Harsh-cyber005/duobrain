@@ -12,7 +12,7 @@ const makeCommit = n => {
 
     const x = Math.floor(Math.random() * 55);
     const y = Math.floor(Math.random() * 7);
-    let date = moment().subtract(1, 'y').add(1, 'd').add(x, 'w').add(y, 'd');
+    let date = moment().subtract(1, 'y').subtract(0.5, 'y').add(1, 'd').add(x, 'w').add(y, 'd');
 
     if (date.isAfter(moment())) {
         console.log(`Skipping commit ${n} due to future date: ${date.format()}`);
